@@ -142,102 +142,8 @@ body {
 }
 
 /* Ensure no white strips in dark mode */
-[data-theme="dark"] body,
-[data-theme="dark"] .App,
-[data-theme="dark"] main,
-[data-theme="dark"] section {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%) !important;
-}
 
-/* Remove any section spacing that could show white */
-[data-theme="dark"] .hero,
-[data-theme="dark"] .work-experience-section,
-[data-theme="dark"] .skills-section,
-[data-theme="dark"] .education-section,
-[data-theme="dark"] .courses-section,
-[data-theme="dark"] .projects-section,
-[data-theme="dark"] .contact-section {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%) !important;
-  margin: 0 !important;
-  border: none !important;
-}
 
-/* Ensure section overlays are dark */
-[data-theme="dark"] .hero::before,
-[data-theme="dark"] .work-experience-section::before,
-[data-theme="dark"] .skills-section::before,
-[data-theme="dark"] .education-section::before,
-[data-theme="dark"] .courses-section::before,
-[data-theme="dark"] .projects-section::before,
-[data-theme="dark"] .contact-section::before {
-  background: rgba(0, 0, 0, 0.2) !important;
-}
-
-/* Full width dark background enforcement */
-[data-theme="dark"] html,
-[data-theme="dark"] body,
-[data-theme="dark"] #root {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%) !important;
-  width: 100% !important;
-  min-width: 100% !important;
-}
-
-/* Remove any container constraints in dark mode */
-[data-theme="dark"] .container,
-[data-theme="dark"] .section-content {
-  max-width: 1200px !important;
-  margin: 0 auto !important;
-  padding: 0 40px !important;
-}
-
-/* Ensure no white gaps between sections */
-[data-theme="dark"] section + section {
-  margin-top: 0 !important;
-  border-top: none !important;
-}
-
-/* Dark theme specific overrides for better visibility */
-[data-theme="dark"] .experience-content li,
-[data-theme="dark"] .project-description li,
-[data-theme="dark"] .skill-item {
-  background: rgba(255, 255, 255, 0.25) !important;
-  color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.3) !important;
-}
-
-[data-theme="dark"] .project-title-section h3,
-[data-theme="dark"] .experience-content h3,
-[data-theme="dark"] .education-content h3 {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-}
-
-/* Additional dark theme content visibility */
-[data-theme="dark"] .experience-content h4,
-[data-theme="dark"] .education-content h4,
-[data-theme="dark"] .education-content p,
-[data-theme="dark"] .contact-details h4,
-[data-theme="dark"] .contact-details p,
-[data-theme="dark"] .footer-section h4,
-[data-theme="dark"] .footer-section p,
-[data-theme="dark"] .footer-section li,
-[data-theme="dark"] .footer-section a {
-  color: #ffffff !important;
-}
-
-/* Experience and project list items */
-[data-theme="dark"] .experience-content ul li,
-[data-theme="dark"] .project-description ul li {
-  color: #f1f5f9 !important;
-  background: rgba(255, 255, 255, 0.2) !important;
-}
-
-/* Darker cards with whiter content for projects and experience */
-[data-theme="dark"] .experience-item,
-[data-theme="dark"] .project-card {
-  background: rgba(0, 0, 0, 0.4) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-}
 
 [data-theme="dark"] .experience-content,
 [data-theme="dark"] .project-content {
@@ -548,10 +454,9 @@ body {
 }
 
 /* Skills and other card content */
-[data-theme="dark"] .skills-grid .skill-category,
-[data-theme="dark"] .education-timeline .education-item,
+
 [data-theme="dark"] .projects-grid .project-card {
-  background: rgba(255, 255, 255, 0.1) !important;
+  background: #000 !important;
 }
 
 /* Ensure all paragraph text is visible */
