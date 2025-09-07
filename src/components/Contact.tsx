@@ -201,16 +201,6 @@ const Contact: React.FC = () => {
                   </>
                 )}
               </button>
-              
-              <button 
-                type="button" 
-                className="mailto-btn" 
-                onClick={handleMailto}
-                disabled={!formData.name || !formData.email || !formData.message}
-              >
-                Email Me Directly
-                <i className="fas fa-external-link-alt"></i>
-              </button>
             </div>
           </form>
         </div>

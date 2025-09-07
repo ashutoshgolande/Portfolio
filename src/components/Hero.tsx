@@ -16,16 +16,16 @@ const Hero: React.FC = () => {
               passionate about building scalable backend solutions and 
               innovative software systems. Currently working at Cars24.
             </p>
-            <button className="contact-btn">
-              <span>Contact Me</span>
-              <i className="fas fa-arrow-right"></i>
-            </button>
+            <a href="/Ashutosh_CV.pdf" download className="contact-btn" style={{ textDecoration: 'none' }}>
+              <span>Download Resume</span>
+              <i className="fas fa-download"></i>
+            </a>
           </div>
           <div className="hero-image">
             <div className="image-blob">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" 
-                alt="Ashutosh Golande" 
+                src="/mypic.jpg"
+                alt="Ashutosh Golande"
                 className="profile-img"
               />
             </div>

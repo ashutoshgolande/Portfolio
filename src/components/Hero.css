@@ -175,9 +175,11 @@
   width: 280px;
   height: 280px;
   object-fit: cover;
+  object-position: 50% 30%; /* Adjust vertical position to center face */
   border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
   animation: blob-morph 8s ease-in-out infinite;
   animation-delay: -1s;
+  transform: scale(1.25); /* Zoom in on the image */
 }
 
 @keyframes blob-morph {

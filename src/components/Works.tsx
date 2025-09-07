@@ -18,18 +18,18 @@ const Works: React.FC = () => {
       tags: ['C++', 'SQLite', 'Database Management']
     },
     {
-      id: 3,
-      title: 'Festival Management System',
-      description: 'Created a secure system with SpringBoot and PostgreSQL, featuring role-specific registration for Students, Participants, and Organizers.',
-      image: 'https://via.placeholder.com/400x250/7c3aed/ffffff?text=Festival+MS',
-      tags: ['Spring Boot', 'PostgreSQL', 'Authentication']
+  id: 3,
+  title: 'Festival Management System',
+  description: `Created a secure system with SpringBoot and PostgreSQL, having role-specific registration for Students, Participants, Organizers.\n• Implemented event search, registration, cancellation, volunteering, and organizer roles for event creation and declaring winner.\n• Managed relational data with PostgreSQL and pgAdmin4 handling CRUD operations for users, events, winners with validation.\n• Allowed admins to manage user accounts, handle event outcomes, and access reports for winners, logistics, accommodation.`,
+  image: 'https://via.placeholder.com/400x250/7c3aed/ffffff?text=Festival+MS',
+  tags: ['Spring Boot', 'PostgreSQL', 'Authentication']
     },
     {
-      id: 4,
-      title: 'Relational Database Implementation',
-      description: 'Implemented custom logic for SQL operations like Union, Difference, Cartesian Product, Projection, Selection, and Rename using C++.',
-      image: 'https://via.placeholder.com/400x250/059669/ffffff?text=Database+Engine',
-      tags: ['C++', 'SQL', 'Relational Algebra']
+  id: 4,
+  title: 'Implementing Functionalities of Relational Database',
+  description: `Implemented custom logic for SQL operations, like Union, Difference, Cartesian Product, Projection, Selection, and Rename.\n• Designed and built a C++ application to execute complex relational database queries, utilizing relational algebra principles.\n• Created an intuitive command-line interface for seamless execution of all relational database operations.`,
+  image: 'https://via.placeholder.com/400x250/059669/ffffff?text=Database+Engine',
+  tags: ['C++', 'SQL', 'Relational Algebra']
     },
     {
       id: 5,

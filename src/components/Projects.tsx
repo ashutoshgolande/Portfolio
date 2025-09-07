@@ -8,20 +8,20 @@ const Projects: React.FC = () => {
       icon: "🎉",
       technologies: ["Spring Boot", "PostgreSQL", "pgAdmin4"],
       description: [
-        "Built a comprehensive festival platform that revolutionizes event management with role-based access for 1000+ users",
-        "Engineered seamless event discovery and registration system with real-time availability tracking and instant booking confirmations",
-        "Developed intelligent volunteer matching system that connects passionate students with meaningful event opportunities",
-        "Created powerful admin analytics dashboard providing insights into event performance, user engagement, and operational efficiency"
+        "Created a secure system with SpringBoot and PostgreSQL, having role-specific registration for Students, Participants, Organizers.",
+        "Implemented event search, registration, cancellation, volunteering, and organizer roles for event creation and declaring winner.",
+        "Managed relational data with PostgreSQL and pgAdmin4 handling CRUD operations for users, events, winners with validation.",
+        "Allowed admins to manage user accounts, handle event outcomes, and access reports for winners, logistics, accommodation."
       ]
     },
     {
-      title: "Custom Relational Database Engine",
+      title: "Implementing Functionalities of Relational Database",
       icon: "🗃️",
       technologies: ["C++", "SQL", "Relational Algebra"],
       description: [
-        "Architected a high-performance database engine from scratch, implementing core SQL operations with 40% faster query execution",
-        "Designed intuitive command-line interface that transforms complex database operations into simple, user-friendly commands",
-        "Built robust relational algebra processor handling millions of records with optimized memory management and query optimization"
+        "Implemented custom logic for SQL operations, like Union, Difference, Cartesian Product, Projection, Selection, and Rename.",
+        "Designed and built a C++ application to execute complex relational database queries, utilizing relational algebra principles.",
+        "Created an intuitive command-line interface for seamless execution of all relational database operations."
       ]
     },
     {
