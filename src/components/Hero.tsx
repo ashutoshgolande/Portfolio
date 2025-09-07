@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
               passionate about building scalable backend solutions and 
               innovative software systems. Currently working at Cars24.
             </p>
-            <a href="/Ashutosh_CV.pdf" download className="contact-btn" style={{ textDecoration: 'none' }}>
+            <a href={`${process.env.PUBLIC_URL}/Ashutosh_CV.pdf`} download className="contact-btn" style={{ textDecoration: 'none' }}>
               <span>Download Resume</span>
               <i className="fas fa-download"></i>
             </a>
@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
           <div className="hero-image">
             <div className="image-blob">
               <img 
-                src="/mypic.jpg"
+                src={`${process.env.PUBLIC_URL}/mypic.jpg`}
                 alt="Ashutosh Golande"
                 className="profile-img"
               />
