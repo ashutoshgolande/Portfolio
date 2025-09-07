@@ -36,8 +36,7 @@ const Footer: React.FC = () => {
             <div className="footer-section">
               <h4>Connect</h4>
               <p>📧 ashutoshgolande0608@gmail.com</p>
-              <p>📱 +91 9175043690</p>
-              <p>📍 India</p>
+              <p> India</p>
               <p>🌐 Available for opportunities</p>
             </div>
           </div>
@@ -49,9 +48,6 @@ const Footer: React.FC = () => {
           </a>
           <a href="mailto:ashutoshgolande0608@gmail.com" className="social-link" aria-label="Email">
             <i className="fas fa-envelope"></i>
-          </a>
-          <a href="https://github.com/ashutoshgolande" className="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-github"></i>
           </a>
         </div>
         

@@ -117,15 +117,6 @@ const Contact: React.FC = () => {
               </div>
             </div>
             
-            <div className="contact-item">
-              <div className="contact-icon">
-                <i className="fas fa-phone"></i>
-              </div>
-              <div className="contact-details">
-                <h4>Phone</h4>
-                <p>+91 9175043690</p>
-              </div>
-            </div>
             
             <div className="contact-item">
               <div className="contact-icon">
