@@ -1,9 +1,9 @@
 // EmailJS Configuration
 // You'll need to replace these with your actual EmailJS credentials
 export const emailConfig = {
-  serviceId: 'service_c287crs', // Replace with your EmailJS service ID
-  templateId: 'template_fg8032e', // Replace with your EmailJS template ID
-  publicKey: 'RFlpK9Ec-oQHL5daj', // Replace with your EmailJS public key
+  serviceId: 'service_05bcypo', // Replace with your EmailJS service ID
+  templateId: 'template_3kdzeg3', // Replace with your EmailJS template ID
+  publicKey: 'b-Gy6VHl2RjP3IxxN', // Replace with your EmailJS public key
 };
 
 // Instructions to set up EmailJS:
@@ -12,3 +12,4 @@ export const emailConfig = {
 // 3. Create an email template
 // 4. Get your service ID, template ID, and public key
 // 5. Replace the values above with your actual credentials
+
