@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
           <div className="hero-image">
             <div className="image-blob">
               <img 
-                src={`${process.env.PUBLIC_URL}/mypic.jpg`}
+                src="https://i.postimg.cc/3NYW0r4B/IMG-20250907-WA0010.jpg"
                 alt="Ashutosh Golande"
                 className="profile-img"
               />
