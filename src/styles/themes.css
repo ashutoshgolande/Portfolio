@@ -1,0 +1,503 @@
+/* Global Theme Variables */
+:root[data-theme="dark"] {
+  /* Background Colors */
+  --bg-primary: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+  --bg-secondary: rgba(255, 255, 255, 0.05);
+  --bg-card: rgba(255, 255, 255, 0.15);
+  --bg-glass: rgba(255, 255, 255, 0.03);
+  --bg-hero: linear-gradient(135deg, #0f0f23 0%, #16213e 50%, #1a1a2e 100%);
+  --bg-glass: rgba(255, 255, 255, 0.03);
+  --bg-hero: linear-gradient(135deg, #0f0f23 0%, #16213e 50%, #1a1a2e 100%);
+  
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #f1f5f9;
+  --text-muted: #cbd5e1;
+  --text-gradient: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+  
+  /* Accent Colors */
+  --accent-primary: #60a5fa;
+  --accent-secondary: #a78bfa;
+  --accent-success: #34d399;
+  --accent-warning: #fbbf24;
+  
+  /* Border Colors */
+  --border-primary: rgba(255, 255, 255, 0.15);
+  --border-secondary: rgba(255, 255, 255, 0.08);
+  
+  /* Shadow Colors */
+  --shadow-light: rgba(0, 0, 0, 0.3);
+  --shadow-medium: rgba(0, 0, 0, 0.5);
+  --shadow-heavy: rgba(0, 0, 0, 0.7);
+  
+  /* Navbar */
+  --navbar-bg: rgba(15, 15, 35, 0.95);
+  --navbar-text: #ffffff;
+  
+  /* Footer */
+  --footer-bg: rgba(15, 15, 35, 0.95);
+}
+
+:root[data-theme="light"] {
+  /* Background Colors */
+  --bg-primary: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+  --bg-secondary: rgba(0, 0, 0, 0.03);
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --bg-glass: rgba(255, 255, 255, 0.4);
+  --bg-hero: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 50%, #cbd5e1 100%);
+  
+  /* Text Colors */
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-gradient: linear-gradient(135deg, #1e293b 0%, #475569 100%);
+  
+  /* Accent Colors */
+  --accent-primary: #3b82f6;
+  --accent-secondary: #8b5cf6;
+  --accent-success: #10b981;
+  --accent-warning: #f59e0b;
+  
+  /* Border Colors */
+  --border-primary: rgba(0, 0, 0, 0.08);
+  --border-secondary: rgba(0, 0, 0, 0.04);
+  
+  /* Shadow Colors */
+  --shadow-light: rgba(0, 0, 0, 0.04);
+  --shadow-medium: rgba(0, 0, 0, 0.08);
+  --shadow-heavy: rgba(0, 0, 0, 0.12);
+  
+  /* Navbar */
+  --navbar-bg: rgba(248, 250, 252, 0.95);
+  --navbar-text: #1e293b;
+  
+  /* Footer */
+  --footer-bg: rgba(248, 250, 252, 0.95);
+}
+
+/* Base body styling */
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+/* Ensure no white strips in dark mode */
+[data-theme="dark"] body,
+[data-theme="dark"] .App,
+[data-theme="dark"] main,
+[data-theme="dark"] section {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%) !important;
+}
+
+/* Remove any section spacing that could show white */
+[data-theme="dark"] .hero,
+[data-theme="dark"] .work-experience-section,
+[data-theme="dark"] .skills-section,
+[data-theme="dark"] .education-section,
+[data-theme="dark"] .courses-section,
+[data-theme="dark"] .projects-section,
+[data-theme="dark"] .contact-section {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%) !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+/* Ensure section overlays are dark */
+[data-theme="dark"] .hero::before,
+[data-theme="dark"] .work-experience-section::before,
+[data-theme="dark"] .skills-section::before,
+[data-theme="dark"] .education-section::before,
+[data-theme="dark"] .courses-section::before,
+[data-theme="dark"] .projects-section::before,
+[data-theme="dark"] .contact-section::before {
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Full width dark background enforcement */
+[data-theme="dark"] html,
+[data-theme="dark"] body,
+[data-theme="dark"] #root {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%) !important;
+  width: 100% !important;
+  min-width: 100% !important;
+}
+
+/* Remove any container constraints in dark mode */
+[data-theme="dark"] .container,
+[data-theme="dark"] .section-content {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 40px !important;
+}
+
+/* Ensure no white gaps between sections */
+[data-theme="dark"] section + section {
+  margin-top: 0 !important;
+  border-top: none !important;
+}
+
+/* Dark theme specific overrides for better visibility */
+[data-theme="dark"] .experience-content li,
+[data-theme="dark"] .project-description li,
+[data-theme="dark"] .skill-item {
+  background: rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+[data-theme="dark"] .project-title-section h3,
+[data-theme="dark"] .experience-content h3,
+[data-theme="dark"] .education-content h3 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Additional dark theme content visibility */
+[data-theme="dark"] .experience-content h4,
+[data-theme="dark"] .education-content h4,
+[data-theme="dark"] .education-content p,
+[data-theme="dark"] .contact-details h4,
+[data-theme="dark"] .contact-details p,
+[data-theme="dark"] .footer-section h4,
+[data-theme="dark"] .footer-section p,
+[data-theme="dark"] .footer-section li,
+[data-theme="dark"] .footer-section a {
+  color: #ffffff !important;
+}
+
+/* Experience and project list items */
+[data-theme="dark"] .experience-content ul li,
+[data-theme="dark"] .project-description ul li {
+  color: #f1f5f9 !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Darker cards with whiter content for projects and experience */
+[data-theme="dark"] .experience-item,
+[data-theme="dark"] .project-card {
+  background: rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .experience-content,
+[data-theme="dark"] .project-content {
+  background: rgba(0, 0, 0, 0.3) !important;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+[data-theme="dark"] .experience-content li,
+[data-theme="dark"] .project-description li {
+  background: rgba(0, 0, 0, 0.5) !important;
+  color: #ffffff !important;
+  border-left-color: rgba(255, 255, 255, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Enhanced text visibility within dark cards */
+[data-theme="dark"] .experience-content h3,
+[data-theme="dark"] .experience-content h4,
+[data-theme="dark"] .project-title-section h3,
+[data-theme="dark"] .project-content h3,
+[data-theme="dark"] .project-content h4 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Date and meta information */
+[data-theme="dark"] .experience-date,
+[data-theme="dark"] .project-date {
+  background: rgba(0, 0, 0, 0.6) !important;
+  color: #cbd5e1 !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Project and experience descriptions */
+[data-theme="dark"] .experience-content p,
+[data-theme="dark"] .project-content p,
+[data-theme="dark"] .project-description p {
+  color: #f1f5f9 !important;
+}
+
+/* Dark mode hover effects for cards */
+[data-theme="dark"] .experience-item:hover,
+[data-theme="dark"] .project-card:hover {
+  background: rgba(0, 0, 0, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Enhanced list item visibility in dark cards */
+[data-theme="dark"] .experience-content li:hover,
+[data-theme="dark"] .project-description li:hover {
+  background: rgba(0, 0, 0, 0.7) !important;
+  border-left-color: #60a5fa !important;
+  transform: translateX(5px);
+}
+
+/* Dark mode styling for Education, Contact, and Footer */
+[data-theme="dark"] .education-item,
+[data-theme="dark"] .contact-item,
+[data-theme="dark"] .contact-card,
+[data-theme="dark"] .footer {
+  background: rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .education-content,
+[data-theme="dark"] .contact-details,
+[data-theme="dark"] .footer-content {
+  background: rgba(0, 0, 0, 0.3) !important;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+/* Education timeline styling */
+[data-theme="dark"] .education-item {
+  background: rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .education-content h3,
+[data-theme="dark"] .education-content h4,
+[data-theme="dark"] .education-content p {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Contact section styling */
+[data-theme="dark"] .contact-item {
+  background: rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .contact-details h4,
+[data-theme="dark"] .contact-details p,
+[data-theme="dark"] .contact-item h3,
+[data-theme="dark"] .contact-item p {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer section styling */
+[data-theme="dark"] .footer {
+  background: rgba(0, 0, 0, 0.6) !important;
+}
+
+[data-theme="dark"] .footer-brand,
+[data-theme="dark"] .footer-section,
+[data-theme="dark"] .footer-details {
+  background: rgba(0, 0, 0, 0.4) !important;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .footer-brand h3,
+[data-theme="dark"] .footer-brand p,
+[data-theme="dark"] .footer-section h4,
+[data-theme="dark"] .footer-section p,
+[data-theme="dark"] .footer-section li,
+[data-theme="dark"] .footer-section a,
+[data-theme="dark"] .copyright,
+[data-theme="dark"] .year,
+[data-theme="dark"] .portfolio-note {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover effects for education, contact, and footer */
+[data-theme="dark"] .education-item:hover,
+[data-theme="dark"] .contact-item:hover {
+  background: rgba(0, 0, 0, 0.7) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .footer-section:hover {
+  background: rgba(0, 0, 0, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Education and contact date/meta information */
+[data-theme="dark"] .education-date,
+[data-theme="dark"] .education-date span,
+[data-theme="dark"] .contact-info,
+[data-theme="dark"] .contact-meta {
+  background: rgba(0, 0, 0, 0.6) !important;
+  color: #cbd5e1 !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Skills section dark mode consistency */
+[data-theme="dark"] .skills-category,
+[data-theme="dark"] .skill-category {
+  background: rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .skill-item {
+  background: rgba(0, 0, 0, 0.5) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+[data-theme="dark"] .skill-item:hover {
+  background: #60a5fa !important;
+  color: #ffffff !important;
+  border-color: #60a5fa !important;
+}
+
+/* Footer links hover effects */
+[data-theme="dark"] .footer-section a:hover {
+  color: #60a5fa !important;
+  background: rgba(96, 165, 250, 0.1) !important;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+/* Contact Form Dark Mode Styling */
+[data-theme="dark"] .contact-form {
+  background: rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+[data-theme="dark"] .contact-form h3 {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Form inputs and textarea */
+[data-theme="dark"] .contact-form input,
+[data-theme="dark"] .contact-form textarea,
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea {
+  background: rgba(0, 0, 0, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+[data-theme="dark"] .contact-form input::placeholder,
+[data-theme="dark"] .contact-form textarea::placeholder,
+[data-theme="dark"] .form-group input::placeholder,
+[data-theme="dark"] .form-group textarea::placeholder {
+  color: #cbd5e1 !important;
+}
+
+/* Form labels */
+[data-theme="dark"] .contact-form label,
+[data-theme="dark"] .form-group label {
+  color: #f1f5f9 !important;
+  font-weight: 600;
+}
+
+/* Form submit button */
+[data-theme="dark"] .contact-form button,
+[data-theme="dark"] .form-submit-btn,
+[data-theme="dark"] .submit-btn {
+  background: #60a5fa !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .contact-form button:hover,
+[data-theme="dark"] .form-submit-btn:hover,
+[data-theme="dark"] .submit-btn:hover {
+  background: #3b82f6 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(96, 165, 250, 0.3) !important;
+}
+
+/* Form input focus states */
+[data-theme="dark"] .contact-form input:focus,
+[data-theme="dark"] .contact-form textarea:focus,
+[data-theme="dark"] .form-group input:focus,
+[data-theme="dark"] .form-group textarea:focus {
+  border-color: #60a5fa !important;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1) !important;
+  outline: none !important;
+}
+
+/* Courses Section Dark Mode Styling */
+[data-theme="dark"] .course-item {
+  background: rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .course-content h4 {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .course-item:hover {
+  background: rgba(0, 0, 0, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Category titles and section subtitles */
+[data-theme="dark"] .category-title,
+[data-theme="dark"] .section-subtitle {
+  color: #f1f5f9 !important;
+}
+
+/* Project and experience dates */
+[data-theme="dark"] .experience-date span,
+[data-theme="dark"] .education-date span {
+  color: #cbd5e1 !important;
+}
+
+/* Hero section text */
+[data-theme="dark"] .hero-title,
+[data-theme="dark"] .hero-description {
+  color: #ffffff !important;
+}
+
+/* Navbar text */
+[data-theme="dark"] .nav-link {
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active {
+  color: #ffffff !important;
+}
+
+/* Footer text elements */
+[data-theme="dark"] .copyright,
+[data-theme="dark"] .year,
+[data-theme="dark"] .portfolio-note,
+[data-theme="dark"] .footer-brand h3,
+[data-theme="dark"] .footer-brand p {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Skills and other card content */
+[data-theme="dark"] .skills-grid .skill-category,
+[data-theme="dark"] .education-timeline .education-item,
+[data-theme="dark"] .projects-grid .project-card {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Ensure all paragraph text is visible */
+[data-theme="dark"] p,
+[data-theme="dark"] li,
+[data-theme="dark"] span {
+  color: #f1f5f9 !important;
+}
